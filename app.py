@@ -44,7 +44,7 @@ if category != "All Categories":
 #Visualisasi dgn bar chart
 slt.header(":video_camera: Channel")
 bar_data = outputs['channel_name'].value_counts().nlargest(10)
-fig = px.bar(bar_data, color=bar_data, orientation= 'h', title= f"Channel Terpopuler dari kategori {category}")
+fig = px.bar(bar_data, color=bar_data, orientation= 'h', title= f"Channel Terpopuler dari kategori {category}", x = "Ketenaran berdasarkan channnel muncul", y= "Nama Channel")
 slt.plotly_chart(fig)
 
 # Visualisasi scatter plot
