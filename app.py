@@ -8,11 +8,11 @@ px.defaults.template = 'plotly_dark'
 px.defaults.color_continuous_scale = 'reds'
 
 # Gambar bisa dari link atau file local
-# image_url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/1200px-YouTube_social_white_square_%282017%29.svg.png'
-img = Image.open('Youtube.png')
+image_url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/1200px-YouTube_social_white_square_%282017%29.svg.png'
+# img = Image.open('Youtube.png')
 
 # Displaying the image in the sidebar
-slt.sidebar.image(img, caption='youtube')
+slt.sidebar.image(image_url, caption='youtube')
 
 #buka data pickle
 with open("used_data.pickle", 'rb') as f:
