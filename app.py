@@ -9,7 +9,7 @@ px.defaults.color_continuous_scale = 'reds'
 
 # Gambar bisa dari link atau file local
 image_url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/1200px-YouTube_social_white_square_%282017%29.svg.png'
-# img = Image.open('Youtube.png')
+# img = Image.open('Youtube.png', 'rb').read()
 
 # Displaying the image in the sidebar
 slt.sidebar.image(image_url, caption='youtube')
@@ -44,7 +44,7 @@ if category != "All Categories":
 #Visualisasi dgn bar chart
 slt.header(":video_camera: Channel")
 bar_data = outputs['channel_name'].value_counts().nlargest(10)
-fig = px.bar(bar_data, color=bar_data, orientation= 'h', title= f"Channel Terpopuler dari kategori {category}", x = 'Ketenaran berdasarkan channnel muncul', y= 'Nama Channel')
+fig = px.bar(bar_data, color=bar_data, orientation= 'h', title= f"Channel Terpopuler dari kategori {category}")
 slt.plotly_chart(fig)
 
 # Visualisasi scatter plot
